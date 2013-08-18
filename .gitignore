@@ -7,4 +7,6 @@ __history
 *.map
 *.exe
 *.dll
-bin/*
+dcu/*
+Bttrfly.res
+Bttrfly_Base.res
