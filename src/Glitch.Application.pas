@@ -99,7 +99,7 @@ uses
   Glitch.Sprite.Piglet,
   Glitch.Sound,
   Glitch.Utils,
-  Glitch.Dialog;
+  Glitch.Dialog, KOL_glBitmap, KOL_err;
 
 var
   SpriteClasses: array [0 .. 4] of TGLObjectDrawClass = //
@@ -687,7 +687,11 @@ end;
 procedure TApp.Click(const AHWND: HWND);
 begin
 {$IFDEF DEBUG}
+   // CreateObject(TCaterpillar);
   // CreateObject(TPiggy);
+  // CreateObject(TKitty);
+  // CreateObject(TPiglet);
+ // CreateObject(TPiggy);
 {$ENDIF}
 end;
 
@@ -695,13 +699,26 @@ end;
 
 procedure TApp.Start;
 begin
-  // CreateObject(TCaterpillar);
-  // CreateObject(TPiggy);
-  // CreateObject(TKitty);
-  // CreateObject(TPiglet);
-   CreateObject(TButterfly);
+  try
+    CreateObject(TButterfly);
+  except
+    on e: EglBitmapNonPowerOfTwoException do
+    begin
+      ShowMessage('Sorry, your grafic card is not supported :.(');
+      Halt;
+    end;
+    on e: EglBitmapSizeToLargeException do
+    begin
+      ShowMessage('Sorry, your grafic card is not supported :.(');
+      Halt;
+    end;
+    on e: Exception do
+    begin
+      ShowMessage('Sorry, some error occured, this is not working :.(');
+      Halt;
+    end;
+  end;
 end;
-
 { ------------------------------------------------------------------------------ }
 
 end.

@@ -26,7 +26,7 @@ uses
   KOL_png in 'src\kol\KOL_png.pas',
   KOL_zlib in 'src\kol\KOL_zlib.pas';
 
-{$R 'AwsmBttrfly.res'}
+{$R 'AwsmBttrflyEx.res'}
 
 begin
   WinMain(hInstance, System.hPrevInst, System.CmdLine, System.CmdShow);
