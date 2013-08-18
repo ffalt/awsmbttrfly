@@ -3,10 +3,10 @@
 			<ProjectGuid>{2780A5D0-A204-4D69-985C-1770B2E2046C}</ProjectGuid>
 		</PropertyGroup>
 		<ItemGroup>
-			<Projects Include="AwsmBttrfly.dproj">
+			<Projects Include="AwsmBttrflyEx.dproj">
 				<Dependencies/>
 			</Projects>
-			<Projects Include="AwsmBttrflyStandalone.dproj">
+			<Projects Include="AwsmBttrfly.dproj">
 				<Dependencies/>
 			</Projects>
 		</ItemGroup>
@@ -17,6 +17,15 @@
 				<Default.Personality/>
 			</BorlandProject>
 		</ProjectExtensions>
+		<Target Name="AwsmBttrflyEx">
+			<MSBuild Projects="AwsmBttrflyEx.dproj"/>
+		</Target>
+		<Target Name="AwsmBttrflyEx:Clean">
+			<MSBuild Projects="AwsmBttrflyEx.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="AwsmBttrflyEx:Make">
+			<MSBuild Projects="AwsmBttrflyEx.dproj" Targets="Make"/>
+		</Target>
 		<Target Name="AwsmBttrfly">
 			<MSBuild Projects="AwsmBttrfly.dproj"/>
 		</Target>
@@ -26,23 +35,14 @@
 		<Target Name="AwsmBttrfly:Make">
 			<MSBuild Projects="AwsmBttrfly.dproj" Targets="Make"/>
 		</Target>
-		<Target Name="AwsmBttrflyStandalone">
-			<MSBuild Projects="AwsmBttrflyStandalone.dproj"/>
-		</Target>
-		<Target Name="AwsmBttrflyStandalone:Clean">
-			<MSBuild Projects="AwsmBttrflyStandalone.dproj" Targets="Clean"/>
-		</Target>
-		<Target Name="AwsmBttrflyStandalone:Make">
-			<MSBuild Projects="AwsmBttrflyStandalone.dproj" Targets="Make"/>
-		</Target>
 		<Target Name="Build">
-			<CallTarget Targets="AwsmBttrfly;AwsmBttrflyStandalone"/>
+			<CallTarget Targets="AwsmBttrflyEx;AwsmBttrfly"/>
 		</Target>
 		<Target Name="Clean">
-			<CallTarget Targets="AwsmBttrfly:Clean;AwsmBttrflyStandalone:Clean"/>
+			<CallTarget Targets="AwsmBttrflyEx:Clean;AwsmBttrfly:Clean"/>
 		</Target>
 		<Target Name="Make">
-			<CallTarget Targets="AwsmBttrfly:Make;AwsmBttrflyStandalone:Make"/>
+			<CallTarget Targets="AwsmBttrflyEx:Make;AwsmBttrfly:Make"/>
 		</Target>
 		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
 	</Project>
