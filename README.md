@@ -7,8 +7,9 @@ Windows Desktop Glitch Animals
 
 #Downloads:
 
-AwsmBttrflySetup(version number).exe : Install-Version
+Install-Version: 
+https://github.com/ffalt/awsmbttrfly/raw/master/dist/AwsmBttrflySetup0.8.exe
 
-AwsmBttrfly(version number).zip : Portable All-In-One-Exe-File 
+Portable All-In-One-Exe-File
+https://github.com/ffalt/awsmbttrfly/raw/master/dist/AwsmBttrfly0.8.zip  
 
-https://github.com/ffalt/awsmbttrfly/tree/master/dist
