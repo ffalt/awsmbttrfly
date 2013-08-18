@@ -1,6 +1,6 @@
 ﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 		<PropertyGroup>
-			<ProjectGuid>{81955575-EE42-405F-8956-0082779DFFAF}</ProjectGuid>
+			<ProjectGuid>{81955575-EE42-405F-8956-0082779DAAAF}</ProjectGuid>
 			<MainSource>AwsmBttrfly.dpr</MainSource>
 			<Base>True</Base>
 			<Config Condition="'$(Config)'==''">Release</Config>
@@ -43,7 +43,7 @@
 		<PropertyGroup Condition="'$(Base)'!=''">
 			<DCC_DcuOutput>dcu</DCC_DcuOutput>
 			<DCC_WriteableConstants>true</DCC_WriteableConstants>
-			<DCC_Define>NOT_USE_RICHEDIT;UNICODE_CTRLS;PAS_VERSION;$(DCC_Define)</DCC_Define>
+			<DCC_Define>NOT_USE_RICHEDIT;UNICODE_CTRLS;PAS_VERSION;ALLINONE;$(DCC_Define)</DCC_Define>
 			<DCC_ImageBase>00400000</DCC_ImageBase>
 			<DCC_UsePackage>vcl;rtl;vclx;VclSmp;vclshlctrls;$(DCC_UsePackage)</DCC_UsePackage>
 			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
@@ -97,26 +97,29 @@
 				<MainSource>MainSource</MainSource>
 			</DelphiCompile>
 			<DCCReference Include="src\Glitch.Main.pas"/>
-			<DCCReference Include="src\Glitch.Sprite.Butterfly.pas"/>
-			<DCCReference Include="src\Glitch.Texture.pas"/>
-			<DCCReference Include="src\Glitch.Consts.pas"/>
 			<DCCReference Include="src\Glitch.Application.pas"/>
+			<DCCReference Include="src\Glitch.Consts.pas"/>
+			<DCCReference Include="src\Glitch.Dialog.pas"/>
 			<DCCReference Include="src\Glitch.Sound.pas"/>
 			<DCCReference Include="src\Glitch.Sprite.pas"/>
-			<DCCReference Include="src\Glitch.Utils.pas"/>
-			<DCCReference Include="src\kol\KOL_png.pas"/>
-			<DCCReference Include="src\kol\KOL_zlib.pas"/>
-			<DCCReference Include="src\Glitch.Sprite.Milk.pas"/>
-			<DCCReference Include="src\Glitch.Utils.IntHash.pas"/>
+			<DCCReference Include="src\Glitch.Sprite.Butterfly.pas"/>
 			<DCCReference Include="src\Glitch.Sprite.Caterpillar.pas"/>
-			<DCCReference Include="src\kol\KOL_glBitmap.pas"/>
+			<DCCReference Include="src\Glitch.Sprite.Kitty.pas"/>
+			<DCCReference Include="src\Glitch.Sprite.Milk.pas"/>
+			<DCCReference Include="src\Glitch.Sprite.Piggy.pas"/>
+			<DCCReference Include="src\Glitch.Sprite.Piglet.pas"/>
+			<DCCReference Include="src\Glitch.Texture.pas"/>
+			<DCCReference Include="src\Glitch.Utils.pas"/>
+			<DCCReference Include="src\Glitch.Utils.IntHash.pas"/>
 			<DCCReference Include="src\kol\KOL.pas"/>
 			<DCCReference Include="src\kol\KOL_err.pas"/>
 			<DCCReference Include="src\kol\KOL_gl.pas"/>
-			<DCCReference Include="src\Glitch.Sprite.Piggy.pas"/>
-			<DCCReference Include="src\Glitch.Dialog.pas"/>
-			<DCCReference Include="src\Glitch.Sprite.Kitty.pas"/>
-			<DCCReference Include="src\Glitch.Sprite.Piglet.pas"/>
+			<DCCReference Include="src\kol\KOL_glBitmap.pas"/>
+			<DCCReference Include="src\kol\KOL_png.pas"/>
+			<DCCReference Include="src\kol\KOL_zlib.pas"/>
+			<RcCompile Include="resources\Bttrfly.rc">
+				<Form>Bttrfly.res</Form>
+			</RcCompile>
 			<RcCompile Include="resources\Bttrfly_Base.rc">
 				<Form>Bttrfly_Base.res</Form>
 			</RcCompile>

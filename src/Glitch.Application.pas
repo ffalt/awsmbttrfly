@@ -1,7 +1,7 @@
 ﻿unit Glitch.Application;
 
 {
-  //TODO
+  //Ideen
 
   Flug-Geschwindigkeit einstellen/random
   Flügel-Geschwindigkeit einstellen/random
@@ -698,9 +698,8 @@ begin
   // CreateObject(TCaterpillar);
   // CreateObject(TPiggy);
   // CreateObject(TKitty);
-  // CreateObject(TButterfly);
-  CreateObject(TPiglet);
-
+  // CreateObject(TPiglet);
+   CreateObject(TButterfly);
 end;
 
 { ------------------------------------------------------------------------------ }

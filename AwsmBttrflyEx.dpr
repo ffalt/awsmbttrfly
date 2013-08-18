@@ -1,4 +1,4 @@
-program AwsmBttrfly;
+program AwsmBttrflyEx;
 
 {$WARN SYMBOL_PLATFORM OFF}
 {$WARN SYMBOL_DEPRECATED OFF}
@@ -26,7 +26,7 @@ uses
   KOL_png in 'src\kol\KOL_png.pas',
   KOL_zlib in 'src\kol\KOL_zlib.pas';
 
-{$R 'AwsmBttrflyStandalone.res'}
+{$R 'AwsmBttrfly.res'}
 
 begin
   WinMain(hInstance, System.hPrevInst, System.CmdLine, System.CmdShow);
